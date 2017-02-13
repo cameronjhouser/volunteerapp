@@ -1,0 +1,191 @@
+<!-- <section>
+  <div class="page-header">
+    <h1>{{vm.need._id ? 'Edit Need' : 'New Need'}}</h1>
+  </div>
+  <div class="col-md-8">
+    <form name="vm.form.needForm" class="form-horizontal" ng-submit="vm.save(vm.form.needForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.need.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.needForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Need name is required.</p>
+          </div>
+
+          <label class="control-label" for="description">Description</label>
+          <input name="description" type="text" ng-model="vm.need.description" id="description" class="form-control" placeholder="Description" required>
+          <div ng-messages="vm.form.needForm.description.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Need description is required.</p>
+          </div>
+
+          <label class="control-label" for="organization">Organization</label>
+          <input name="organization" type="text" ng-model="vm.need.organization" id="organization" class="form-control" placeholder="Description" required>
+          <div ng-messages="vm.form.needForm.organization.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Organization is required.</p>
+          </div>
+
+          <label class="control-label" for="location">Location</label>
+          <input name="location" type="text" ng-model="vm.need.location" id="location" class="form-control" placeholder="Description" required>
+          <div ng-messages="vm.form.needForm.location.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Location is required.</p>
+          </div>
+
+          <label for="startDate">Start Date : </label>
+          <input name="startDate" type="date" ng-model="vm.need.startDate" id="startDate" value="2017-02-01"/>
+
+          <label for="endDate">End Date : </label>
+          <input name="endDate" type="date" ng-model="vm.need.endDate" id="endDate" value="2017-02-01"/>
+
+          <div>
+              <label for="numberNeeded">Number of Volunteers Needed : </label>
+          <input name="numberNeeded" type="number" ng-model="vm.need.numberNeeded" id="numberNeeded"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.need._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section> -->
+
+
+
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>New Volunteer Need</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
+
+    <section class="container">
+
+    <div class="page-header">
+    <h1>{{vm.need._id ? 'Edit Need' : 'New Need'}}</h1>
+  </div>
+  <div class="col-md-10">
+    <form name="vm.form.needForm" class="form-horizontal" ng-submit="vm.save(vm.form.needForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.need.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.needForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Need name is required.</p>
+          </div>
+
+          <label class="control-label" for="description">Description</label>
+          <input name="description" type="text" ng-model="vm.need.description" id="description" class="form-control" placeholder="Description" required>
+          <div ng-messages="vm.form.needForm.description.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Need description is required.</p>
+          </div>
+
+          <label class="control-label" for="organization">Organization</label>
+          <input name="organization" type="text" ng-model="vm.need.organization" id="organization" class="form-control" placeholder="Description" required>
+          <div ng-messages="vm.form.needForm.organization.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Organization is required.</p>
+          </div>
+
+          <label class="control-label" for="location">Location</label>
+          <input name="location" type="text" ng-model="vm.need.location" id="location" class="form-control" placeholder="Description" required>
+          <div ng-messages="vm.form.needForm.location.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Location is required.</p>
+          </div>
+          <div class="form-group">
+              <div class="col-md-4">
+                  <label class="control-label" for="startDate">Start Date</label>
+                  <div class="controls">
+                      <datepicker name="startDate" ng-model="vm.need.startDate" id="startDate" show-weeks="false" class="well well-sm"></datepicker>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <label class="control-label" for="endDate">End Date</label>
+                  <div class="controls">
+                      <datepicker name="endDate" ng-model="vm.need.endDate" id="endDate" show-weeks="false" class="well well-sm"></datepicker>
+                  </div>
+              </div>
+          </div>
+ <!--                              <label for="startDate">Start Date : </label> -->
+<!--           <input name="startDate" type="date" ng-model="vm.need.startDate" id="startDate" value="2017-02-01"/>
+
+          <label for="endDate">End Date : </label>
+          <input name="endDate" type="date" ng-model="vm.need.endDate" id="endDate" value="2017-02-01"/> -->
+
+          <div>
+              <label for="numberNeeded">Number of Volunteers Needed : </label>
+          <input name="numberNeeded" type="number" ng-model="vm.need.numberNeeded" id="numberNeeded"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.need._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+        <!-- <div class="col-md-12">
+            <form class="form-horizontal" data-ng-submit="create()" novalidate>
+                <fieldset>
+                    <div class="form-group">
+                        <label class="control-label" for="title">Title</label>
+                        <div class="controls">
+                            <input type="text" data-ng-model="title" id="title" class="form-control" placeholder="Title" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="description">Description</label>
+                        <div class="controls">
+                            <textarea name="description" data-ng-model="description" id="description" class="form-control" cols="30" rows="5" placeholder="Volunteer Need Description"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="organization">Organization</label>
+                        <div class="controls">
+                            <input type="text" data-ng-model="organization" id="organization" class="form-control" placeholder="Organization" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="location">Location</label>
+                        <div class="controls">
+                            <input type="text" data-ng-model="location" id="location" class="form-control" placeholder="Location" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4">
+                            <label class="control-label" for="startDate">Start Date</label>
+                            <div class="controls">
+                                <datepicker ng-model="startDate" id="startDate" show-weeks="false" class="well well-sm"></datepicker>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label" for="endDate">End Date</label>
+                            <div class="controls">
+                                <datepicker ng-model="endDate" id="endDate" show-weeks="false" class="well well-sm"></datepicker>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="control-label" for="numberNeeded">Number of Volunteers Needed</label>
+                        <div class="controls">
+                            <input type="number" data-ng-model="numberNeeded" id="numberNeeded" name="numberNeeded" 
+                                class="form-control" required min="1" value="1">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-default">
+                    </div>
+            <div data-ng-show="error" class="text-danger">
+              <strong data-ng-bind="error"></strong>
+            </div>
+                </fieldset>
+            </form>
+        </div> -->
+    </section>
+</section>

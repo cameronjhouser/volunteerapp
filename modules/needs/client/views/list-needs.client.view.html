@@ -1,0 +1,65 @@
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>Volunteer Needs</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
+    
+    <section class="container">
+          <div class="list-group">
+    <a ng-repeat="need in vm.needs"
+       ui-sref="needs.view({ needId: need._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="need.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="need.user" ng-bind="need.user.displayName"></span>
+        <span ng-if="!need.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="need.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.needs.$resolved && !vm.needs.length">
+    No Needs yet, why don't you <a ui-sref="needs.create">create one</a>?
+  </div>
+
+<!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+     <div id="footerwrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h4>About</h4>
+                    <div class="hline-w"></div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Social Links</h4>
+                    <div class="hline-w"></div>
+                    <p>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-tumblr"></i></a>
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Our Bunker</h4>
+                    <div class="hline-w"></div>
+                    <p>
+                        Some Ave, 987,<br/>
+                        23890, New York,<br/>
+                        United States.<br/>
+                    </p>
+                </div>
+            
+            </div>
+        </div>
+     </div>
+    </section>
+    
+</section>
